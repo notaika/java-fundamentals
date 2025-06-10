@@ -6,6 +6,7 @@ import java.util.Scanner; // import scanner
 
 public class GrossPayCalculator {
     // Write a program that calculates an employee's gross pay...
+    // the line below is the entry point of any standalone Java application
     public static void main(String[] args) {
         System.out.println("How many hours did you work?");
 
