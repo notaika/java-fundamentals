@@ -10,7 +10,7 @@ public class StringPractice {
         Scanner scanner = new Scanner(System.in);
         String word = scanner.next();
         System.out.println("Enter the character of word to be analyzed:");
-        String c = scanner.next();
+        char c = scanner.next().charAt(0);
         scanner.close();
 
 
@@ -44,18 +44,18 @@ public class StringPractice {
     }
 
     public static List<Character> getCharAt(String str) {
-        List<Character> chars = new ArrayList<>();
+        List<Character> charsArr = new ArrayList<>();
         for (int i = 0; i < str.length(); i++) {
-            chars.add(str.charAt(i));
+            charsArr.add(str.charAt(i));
         }
-        return chars;
+        return charsArr;
     }
 
     public static boolean isStrEqual(String str) {
         return str.equals("hello");
     }
 
-    public static int indexOfChar(String c, String str) {
+    public static int indexOfChar(char c, String str) {
         return str.indexOf(c);
     }
 
@@ -67,7 +67,7 @@ public class StringPractice {
         return str.toLowerCase();
     }
 
-    public static String replaceChar(String c, String str){
-        return str.replace(c, str);
+    public static String replaceChar(char c, String str){
+        return str.replace(c, '*');
     }
 }
