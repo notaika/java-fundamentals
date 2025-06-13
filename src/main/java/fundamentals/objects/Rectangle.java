@@ -1,4 +1,4 @@
-package objects;
+package fundamentals.objects;
 
 public class Rectangle {
     /*Write a class that describes the fields and methods of a rectangle*/

@@ -1,4 +1,4 @@
-package basics; // package defined * required *
+package fundamentals.basics; // package defined * required *
 import java.util.Scanner; // import scanner
 
 // class declaration

@@ -1,4 +1,4 @@
-package objects;
+package fundamentals.objects;
 
 public class HomeAreaCalculator {
     /*Write a class that creates instances of Rectangle to find the total are aof two rooms in a house*/

@@ -1,4 +1,4 @@
-package conditionals;
+package fundamentals.conditionals;
 import java.util.Scanner;
 
 public class SalaryCalculator {

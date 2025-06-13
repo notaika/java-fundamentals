@@ -1,4 +1,4 @@
-package methods;
+package fundamentals.methods;
 import java.util.Scanner;
 
 public class GreetUser {

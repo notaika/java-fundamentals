@@ -1,4 +1,4 @@
-package loops;
+package fundamentals.loops;
 import java.util.Scanner;
 
 public class AverageTestScore {

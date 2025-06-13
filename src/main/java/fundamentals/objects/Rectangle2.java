@@ -1,4 +1,4 @@
-package objects;
+package fundamentals.objects;
 
 public class Rectangle2 {
     /*Add a default constructor and an all-arg constructor to the Rectangle class*/

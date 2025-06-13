@@ -1,4 +1,4 @@
-package practice;
+package practice.basic_practice;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
