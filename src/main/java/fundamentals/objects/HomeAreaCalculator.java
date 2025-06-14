@@ -6,7 +6,7 @@ public class HomeAreaCalculator {
 
         // instantiating with a default constructor
         // creates an instance (object) stored in the variable name 'room1' with the type of 'Rectangle2'
-        Rectangle2 room1 = new Rectangle2();
+        Rectangle room1 = new Rectangle();
 
         // this object now has access to all the methods
         room1.setLength(50);
@@ -15,7 +15,7 @@ public class HomeAreaCalculator {
 
         // instantiating with the all-args constructor
         // creates an instance (object) stored in the variable name 'room2' with the type of 'Rectangle2'
-        Rectangle2 room2 = new Rectangle2(30, 75);
+        Rectangle room2 = new Rectangle(30, 75);
         // notice we don't have to set those values with the setters anymore
         double areaOfRoom2 = room2.calculateArea();
 

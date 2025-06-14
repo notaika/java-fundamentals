@@ -1,26 +1,31 @@
 package fundamentals.objects;
 
 public class Rectangle {
-    /*Write a class that describes the fields and methods of a rectangle*/
+    /*Add a default constructor and an all-arg constructor to the Rectangle class*/
 
-    // Rectangle fields (data): what are some characteristics all rectangles can have?
     private double length;
     private double width;
     private int sides = 4;
 
-    // Rectangle behaviours (methods): what can all rectangles 'do'?
-    public double calculatePerimeter() {
-        return (2 * length) + (2 * width);
+    // note that all classes have their own default constructor - you just can't see it.
+    // if you wanted to change default values, you would explicitly write the default constructor
+
+    // default constructor
+    public Rectangle() {
+        /*using setter method or 'this' would be fine and would work
+        if you have setter methods, it's best to use those, don't want to be in the habit of another class
+        directly assigning your fields - more scalable; if you change setter - don't have to rewrite constructor*/
+        setLength(0); //this.length = 0;
+        setWidth(0); //this.width = 0;
     }
 
-    public double calculateArea() {
-        return length * width;
+    // all-args constructor
+    public Rectangle(double length, double width) {
+        setLength(length);
+        setWidth(width);
     }
 
-    // Examples of getter and setter methods:
-    // NOTE: 'this' refers to the current object (instance) of the class 'Rectangle'. NOT the class itself.
-    // 'this' cannot be used in a static context, why?
-    // because making a method static, makes it so it belongs to the CLASS thus, 'this' has no context - it must REFER TO AN OBJECT
+    // setter and getter methods
     public double getLength() {
         return length;
     }
@@ -43,5 +48,14 @@ public class Rectangle {
 
     public void setSides(int sides) {
         this.sides = sides;
+    }
+
+    // methods
+    public double calculatePerimeter() {
+        return (2 * length) + (2 * width);
+    }
+
+    public double calculateArea() {
+        return length * width;
     }
 }
