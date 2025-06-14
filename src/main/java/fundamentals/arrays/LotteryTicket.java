@@ -19,6 +19,7 @@ public class LotteryTicket {
 
         // Print the ticket
         printTicket(ticket);
+        System.out.println(Arrays.toString(ticket));
     }
 
     public static int[] generateLotteryTicket() {
@@ -43,6 +44,7 @@ public class LotteryTicket {
 
     // don't want duplicate numbers; keep generating if duplicates found
     public static boolean searchDuplicates(int[] array, int numberToSearch) {
+        // enhanced for-loop; read-only by the way
         for (int num : array) {
             if (numberToSearch == num) {
                 return true;
