@@ -9,7 +9,6 @@ public class Garage {
         System.out.printf("My car is %s and has ran %,d kilometres.", myCar.getColor(), myCar.getMileage());
     }
 
-
     /*Random brain dump about how I understand chain of inheritance and weird AHA moments...
     * - It's mentioned that the 'Object' class is the GODFATHER of all other classes... what does this mean?
     * - Object is the topmost class in Java every class implicitly extends Object even if you don't explicitly write 'extends Object'
@@ -22,4 +21,17 @@ public class Garage {
     * - A class can only explicitly inherit from one other class (only one class after 'extends')
     *   - But the child inherits everything down the chain; though parents obviously cannot inherit from their children
     * */
+
+    /*
+    * Random annoyances I needed clarification for:
+    * 1. "private members are not inherited"
+    *   - this means that they are not accessible directly in the subclass and can't use `this.color` to directly access
+    *     the field from the Coupe instance
+    *   - but they *technically* exist in the subclass, because the subclass is an instance of the parent class
+    *       - they exist "MEMORY-WISE", cannot be accessed unless you have getters/setters
+    *       - but since the parent class it's from (Vehicle) has public getter and setter methods, these methods ARE inherited
+    *         and the main point of these methods are to make those fields accessible
+    *       - private fields are technically just dormant and might as well be invisible within a child class because without
+    *         public getter and setter methods, there is no way for you to access them. (ENCAPSULATION!!!!!! i get it now)
+    */
 }
