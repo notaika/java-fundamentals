@@ -3,9 +3,9 @@ package fundamentals.objects;
 public class Rectangle {
     /*Add a default constructor and an all-arg constructor to the Rectangle class*/
 
-    private double length;
-    private double width;
-    private int sides = 4;
+    protected double length; //used to be: private double length;
+    protected double width; //used to be: private double width;
+    protected int sides = 4; //used to be: private int sides = 4;
 
     // note that all classes have their own default constructor - you just can't see it.
     // if you wanted to change default values, you would explicitly write the default constructor
@@ -57,5 +57,9 @@ public class Rectangle {
 
     public double calculateArea() {
         return length * width;
+    }
+
+    public void print() {
+        System.out.println("I am Rectangle");
     }
 }
