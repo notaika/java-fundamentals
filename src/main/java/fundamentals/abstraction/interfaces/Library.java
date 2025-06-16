@@ -8,6 +8,9 @@ public class Library {
         myBook.setName("Mindset");
         String bookName = myBook.getName();
 
+        double bookPrice = myBook.getPrice();
+
         System.out.println(bookName);
+        System.out.println(bookPrice); // default 50....
     }
 }

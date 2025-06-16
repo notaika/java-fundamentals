@@ -5,6 +5,8 @@ public class Book implements Product {
     private String author;
     private int pages;
     private String isbn;
+    private double price;
+    private String size;
 
     @Override
     public String getName() {
@@ -14,6 +16,11 @@ public class Book implements Product {
     @Override
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String getSize() {
+        return size;
     }
 
     public String getAuthor() {
