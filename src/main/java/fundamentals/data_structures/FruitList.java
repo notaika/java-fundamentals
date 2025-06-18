@@ -50,5 +50,13 @@ public class FruitList {
         // Can also initialize an immutable list
         List<String> moreFruits = List.of("cherry", "plum", "tomato");
         System.out.println("Initialized immutable set: " + moreFruits.toString());
+
+        /*forEach example!
+        * cleaner than enhanced for loop so use when:
+        *   - want clearer/more expressive syntax
+        *   - simple code (one-liner)
+        *   - chaining streams/using method references
+        *   - don't need 'break' and 'continue'*/
+        fruits.forEach(fruit -> System.out.println("Printing each fruit with forEach: " + fruit));
     }
 }

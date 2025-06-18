@@ -3,7 +3,7 @@ package fundamentals.data_structures;
 public class Collections {
     public static void main(String[] args) {
         FruitSet set = new FruitSet();
-        set.setDemo();
+//        set.setDemo();
 
         FruitList list = new FruitList();
 //        list.listDemo();
@@ -12,7 +12,7 @@ public class Collections {
 //        queue.queueDemo();
 
         FruitMap map = new FruitMap();
-//        map.mapDemo();
+        map.mapDemo();
 //        map.mapViewIterator();
     }
 }

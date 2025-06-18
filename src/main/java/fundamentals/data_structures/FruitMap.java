@@ -48,6 +48,9 @@ public class FruitMap {
         );
 
         System.out.println("Initialized immutable Map: " + fruityCalories);
+
+        // forEach for MAP!!!
+        fruitCalories.forEach((fruit, calories) -> System.out.printf("forEach: A %s has %d calories.%n", fruit, calories));
     }
     public void loopKeyValue(Map<String, Integer> fruitMap) {
         // Looping through key:value pairs; basically the for...in equivalent in JS
@@ -131,9 +134,5 @@ public class FruitMap {
             Integer value = valueIterator.next();
             System.out.println("Quantity: " + value);
         }
-    }
-
-    public static void main(String[] args) {
-
     }
 }
