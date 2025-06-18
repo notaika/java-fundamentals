@@ -9,6 +9,9 @@ public class Collections {
 //        list.listDemo();
 
         FruitQueue queue = new FruitQueue();
-        queue.queueDemo();
+//        queue.queueDemo();
+
+        FruitMap map = new FruitMap();
+        map.mapDemo();
     }
 }
