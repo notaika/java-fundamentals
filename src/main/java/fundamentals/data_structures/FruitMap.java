@@ -7,7 +7,7 @@ public class FruitMap {
     public void mapDemo() {
         /*A 'Map' is an interface, so you cannot instantiate it
          *Though unlike Set, List and Queue; it does not extend Collection interface -> it's not a collection of INDIVIDUAL elements but rather holds key:value PAIRS
-         *   - Must use a class that implements Map: `Map<String> mySet = new HashMap<>();` <- fast unordered, allows null
+         *   - Must use a class that implements Map: `Map<String> myMap = new HashMap<>();` <- fast unordered, allows null
          *                                                              = new LinkedHashMap<>(); <- keeps insertion order
          *                                                              = new TreeMap<>(); <- sorted by key
          *                                                              = new HashTable<>(); legacy; synchronized

@@ -6,7 +6,7 @@ public class FruitQueue {
     /*Create a Queue of Fruits*/
     public void queueDemo() {
         /*A 'Queue' is an interface, so you cannot instantiate it
-         *   - Must use a class that implements Queue: `Queue<String> mySet = new ArrayDeque<>();` <- resizable array with access to both ends of structure (stack and queue behaviour in one class)
+         *   - Must use a class that implements Queue: `Queue<String> myQueue = new ArrayDeque<>();` <- resizable array with access to both ends of structure (stack and queue behaviour in one class)
          *                                                                  = new LinkedList<>(); <- doubly-linked list; basic fifo queue
          *                                                                  = new PriorityQueue<>(); <- orders by PRIORITY, not insertion (NOT FIFO)
          *                                                                  = new ArrayBlockingQueue<>(int fixedLength); <- bounded queues (fixed size)

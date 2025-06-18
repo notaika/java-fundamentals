@@ -6,7 +6,7 @@ public class FruitList {
     /*Create a List of Fruits*/
     public void listDemo() {
         /*A 'List' is an interface, so you cannot instantiate it
-         *   - Must use a class that implements List: `List<String> mySet = new ArrayList<>();` <- resizable array
+         *   - Must use a class that implements List: `List<String> myList = new ArrayList<>();` <- resizable array
          *                                                                = new LinkedList<>(); <- doubly-linked list
          *                                                                = new Vector<>(); <- thread-safe (rarely used nowadays)
          *                                                                = ...etc
