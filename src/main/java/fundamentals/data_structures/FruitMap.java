@@ -1,5 +1,6 @@
 package fundamentals.data_structures;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class FruitMap {
@@ -80,5 +81,59 @@ public class FruitMap {
         for (int value : fruitMap.values()) {
             System.out.println("Value: " + value);
         }
+    }
+    public void mapViewIterator() {
+        /*Some Map examples with iterator; converting the view to a 'Set' to allow for .iterator()
+         *   - Most important use case is if you need to remove keys based off their values
+         *   - Not like JS, where you can use for...each and .delete() - this misses edge cases anyway*/
+        Map<String, Integer> fruitInventory = new HashMap<>();
+
+        fruitInventory.put("apple", 0);
+        fruitInventory.put("banana", 3);
+        fruitInventory.put("grapes", 6);
+        fruitInventory.put("orange", 7);
+        fruitInventory.put("lemon", 3);
+
+        // --- fruitSet() with Iterator ---
+        System.out.println("1. fruitSet() - Key + Value (with iterator):");
+        System.out.println("Remove fruits that are not in stock");
+        Iterator<Map.Entry<String, Integer>> fruitIterator = fruitInventory.entrySet().iterator();
+
+        while (fruitIterator.hasNext()) {
+            Map.Entry<String, Integer> fruit = fruitIterator.next();
+
+            if (fruit.getValue() <= 0) {
+                System.out.println("Removing: " + fruit.getKey() + " | " + fruit.getValue() + " in stock.");
+                fruitIterator.remove();
+            } else {
+                System.out.println("Keeping: " + fruit.getKey() + " | " + fruit.getValue() + " in stock.");
+            }
+        }
+
+        // --- Final inventory after removals ---
+        System.out.println("\nFinal Inventory after Checks");
+        for (Map.Entry<String, Integer> fruit : fruitInventory.entrySet()) {
+            System.out.println(fruit.getKey() + " → " + fruit.getValue());
+        }
+
+        // --- keySet() with Iterator ---
+        System.out.println("\n2. keySet() - Key Only (with iterator):");
+        Iterator<String> keyIterator = fruitInventory.keySet().iterator();
+        while (keyIterator.hasNext()) {
+            String key = keyIterator.next();
+            System.out.println("Fruit Key: " + key);
+        }
+
+        // --- values() with Iterator ---
+        System.out.println("\n3. values() - Values Only (with iterator):");
+        Iterator<Integer> valueIterator = fruitInventory.values().iterator();
+        while (valueIterator.hasNext()) {
+            Integer value = valueIterator.next();
+            System.out.println("Quantity: " + value);
+        }
+    }
+
+    public static void main(String[] args) {
+
     }
 }

@@ -1,5 +1,6 @@
 package fundamentals.data_structures;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class FruitSet {
@@ -43,5 +44,16 @@ public class FruitSet {
         Set<String> sweetFruits = Set.of("strawberry", "grapes", "pear");
         System.out.println("Initialized immutable set: " + sweetFruits);
         // sweetFruits.add("blueberry"); <- running this will throw an error.
+
+        fruitLoop(fruits);
+    }
+
+    /*Use an iterator to loop through the `Set` of fruits*/
+    public void fruitLoop(Set<String> fruitSet) {
+        Iterator<String> i = fruitSet.iterator();
+
+        while (i.hasNext()) {
+            System.out.println("Fruit Loop iterator: " + i.next());
+        }
     }
 }
