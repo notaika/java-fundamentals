@@ -27,8 +27,4 @@ public class Task {
         this.description = description;
     }
 
-    // methods
-    public void printDescription() {
-        System.out.println(getDescription());
-    }
 }
