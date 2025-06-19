@@ -42,18 +42,28 @@ _**NOTE TO SELF:** Not urgent right now, but in the future — dive deeper and r
 - Started Java Collections
 - Studied `List`, `Set`, `Queue`, `Map` interfaces
 - Practiced with `ArrayList`, `LinkedList`, `HashSet`, `LinkedHashSet`, `TreeSet`, `ArrayDeque`, and `HashMap`
-- Wrote demo programs for each structure
 - Explored generics (`<T>`, `<K, V>`) and iteration patterns
 - Compared `.remove()`, `.poll()`, `.offer()`, and `.add()` for queues
-- Learned how ordering and uniqueness work in different structures
-- Tried out sorting and looked at the difference between using `List` vs `Set` or `Map`
-- Implemented different loop styles: enhanced for, traditional for, `forEach`, and `entrySet` for Maps
 
 _**NOTE TO SELF:** Still need a lot of practice and clarification about these data structures. Will supplement some documentation and books. (2025-06-17)_
+
+### June 18, 2025
+- Learned about Java Iterators and For-Each:
+    - Practiced enhanced `for-each` loops 
+    - Used `forEach()` method with lambda expressions and method references
+    - Learned method reference syntax: `Class::method`, `object::method`, and constructor refs like `Class::new`
+    - Use of `.entrySet()` for looping through `Map` key-value pairs
+- Completed small Todo List console project to reinforce:
+    - `ArrayList` usage and mutation
+    - Loops, conditionals, and index validation
+    - Creating and managing custom objects (`Task`)
+    - Method decomposition and clean separation of logic (`run()`, `handleMenu()`)
+    - Input handling using `Scanner` (`nextInt()` vs `nextLine()`)
+- Implemented features: add task, view tasks, mark as done, delete completed, exit
 
 ---
 
 ## What's Next
-**Last Updated:** 2025-05-17
+**Last Updated:** 2025-05-18
 
 This past week, I haven't really practiced writing my own code logic and exploring the concepts on my IDE by myself without help or instruction. I've gotten sucked into understanding OOP principles before diving into Data Structures, and that took a bit of time. After this concept on "Collection Iterators" — I plan on spending the rest of the week just writing down code and reinforcing my learning before I fly out to Toronto this weekend. 
