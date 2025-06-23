@@ -2,9 +2,18 @@ package practice.practice_projects.library;
 
 public class Main {
     public static void main(String[] args) {
-        Library test = new Library("Java Library", "1478 IntelliJ Avenue", "09:00 - 17:00");
+        Library test = new Library("Java Lribrary", "1478 IntelliJ Avenue", "09:00 - 17:00");
 //
-//        test.run();
+
+        // book tests
+        for (int i = 1; i <= 10; i++) {
+            String title = "title" + i;
+            String author = "author" + i;
+            String genre = "genre" + i;
+            test.getBooks().add(new Book(title, author, genre));
+        }
+
+        test.run();
 
 //        System.out.println(Integer.parseInt("90"));
 //        String test = "34934";
@@ -18,15 +27,6 @@ public class Main {
 //        System.out.println(test.authenticateLogin(testUser.getEmail(), "poop"));
 //        System.out.println(testUser.getPassword());
 
-        for (int i = 1; i <= 10; i++) {
-            String title = "title" + i;
-            String author = "author" + i;
-            String genre = "genre" + i;
-            test.getBooks().add(new Book(title, author, genre));
-        }
 
-        for (Book book : test.getBooks()) {
-            System.out.println(book.getId());
-        }
     }
 }

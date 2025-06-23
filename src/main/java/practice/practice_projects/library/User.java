@@ -63,7 +63,7 @@ public class User {
         history.add(book);
     }
 
-    public void returnBook() {
-
+    public void returnBook(Book book) {
+        book.setCheckedOut(false);
     }
 }

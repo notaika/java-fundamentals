@@ -113,13 +113,13 @@ public class Library {
 
             switch (input) {
                 case "1":
-//                    borrowBook();
-//                    break;
+                    borrowBook(activeUser);
+                    break;
                 case "2":
-                    returnBook();
+                    returnBook(activeUser);
                     break;
                 case "3":
-//                    checkHistory();
+                    checkHistory(activeUser);
                     break;
                 case "4":
                     viewAvailableBooks();
@@ -216,19 +216,33 @@ public class Library {
         int bookId = scanner.nextInt();
         scanner.nextLine();
 
-        for (Book book : books) {
-            if (bookId == book.getId()) {
-                
+        for (int i = userHistory.size() - 1; i >= 0 ; i--) {
+            if (bookId == userHistory.get(i).getId()) {
+                userHistory.get(i).setCheckedOut(false);
+                activeUser.returnBook(userHistory.get(i));
+                System.out.println("Successfully returned book");
+                return;
             }
+            System.out.println("ERROR: Could not return book");
         }
 
-        activeUser.returnBook();
+    }
+
+    public void checkHistory(User activeUser) {
+        List<Book> userHistory = activeUser.getHistory();
+        for (Book book : userHistory) {
+            System.out.printf("""
+                    ID: %d | Genre: %s
+                    Title: %s | Author: %s
+                    Checked out? %b
+                    """, book.getId(), book.getGenre(), book.getTitle(), book.getAuthor(), book.isCheckedOut());
+        }
     }
 
     public void viewAvailableBooks() {
         List<Book> allBooks = getBooks();
         for (int i = 0; i < allBooks.size(); i++) {
-            System.out.println();
+            System.out.println("test");
         }
     }
 
