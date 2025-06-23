@@ -61,9 +61,20 @@ _**NOTE TO SELF:** Still need a lot of practice and clarification about these da
     - Input handling using `Scanner` (`nextInt()` vs `nextLine()`)
 - Implemented features: add task, view tasks, mark as done, delete completed, exit
 
+### June 20, 2025
+- Currently on the plane headed east watching Valorant Masters this weekend, so no studying but practiced coding concepts by creating a "Library Project". It's not yet done, needs polishing and quite a bit of refactoring. Coded for the entire flight (~4.5 hours)
+  - Practiced and reinforced basic OOP concepts with:
+    - Classes and Methods
+    - Simple and basic data structures (List, ArrayList, Map, Hashmap)
+    - Loops and switch statements
+
+### June 23, 2025
+- At the airport headed back west waiting to board my flight. No coding was done during the weekend but continued working on the mini Library Project.
+  - Refactored and added a bit more code, will finish the rest when I land home.
+
 ---
 
 ## What's Next
-**Last Updated:** 2025-05-18
+**Last Updated:** 2025-05-23
 
-This past week, I haven't really practiced writing my own code logic and exploring the concepts on my IDE by myself without help or instruction. I've gotten sucked into understanding OOP principles before diving into Data Structures, and that took a bit of time. After this concept on "Collection Iterators" — I plan on spending the rest of the week just writing down code and reinforcing my learning before I fly out to Toronto this weekend. 
+Finish and polish the little mini Library Console project I started on the plane. Refresh concepts from last week, especially Collections and Data Structures. Later this week, start on map, streams, etc.
