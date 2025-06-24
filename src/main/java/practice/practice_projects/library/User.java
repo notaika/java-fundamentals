@@ -7,8 +7,6 @@ public class User {
     private String name;
     private String email;
     private String password;
-    private boolean isLoggedIn = false;
-    private static int totalBorrowed;
     private List<Book> history;
 
     public User(String name, String email, String password) {
@@ -42,20 +40,8 @@ public class User {
         this.password = password;
     }
 
-    public boolean isLoggedIn() {
-        return isLoggedIn;
-    }
-
-    public void setLoggedIn(boolean loggedIn) {
-        isLoggedIn = loggedIn;
-    }
-
     public List<Book> getHistory() {
         return history;
-    }
-
-    public void setHistory(List<Book> history) {
-        this.history = history;
     }
 
     // methods

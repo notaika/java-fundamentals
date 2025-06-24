@@ -85,7 +85,7 @@ public class Library {
                 * 1 - Create an Account           *
                 * 2 - Log in                      *
                 * 0 - Exit                        *
-                Enter your option:""");
+                Enter your option: """);
 
             switch (input) {
                 case "1":
@@ -109,7 +109,8 @@ public class Library {
                 * 2 - Return a Book              *
                 * 3 - Check your history         *
                 * 4 - View all available books   *
-                Enter your option:""");
+                * 0 - Logout and Exit            *
+                Enter your option: """);
 
             switch (input) {
                 case "1":
@@ -138,9 +139,9 @@ public class Library {
                 =================================
                 Creating a new library account...""");
         // get user info: name, email and password
-        String userName = getInput("What is your name?");
-        String userEmail = getInput("Enter your email.");
-        String userPassword = getInput("Enter your password.");
+        String userName = getInput("Enter your name: ");
+        String userEmail = getInput("Enter your email: ");
+        String userPassword = getInput("Enter your password: ");
 
         // create new user
         User newUser = new User(userName, userEmail, userPassword);
@@ -156,8 +157,8 @@ public class Library {
                 =================================
                 Welcome back!
                 Please enter your login details.""");
-        String email = getInput("Enter your email");
-        String password = getInput("Enter your password.");
+        String email = getInput("Enter your email: ");
+        String password = getInput("Enter your password: ");
 
         if (authenticateLogin(email, password) == null) {
             System.out.println("ERROR: Credentials did not match.");
@@ -180,13 +181,13 @@ public class Library {
     }
 
     public void borrowBook(User activeUser) {
-        System.out.print("What is the ISBN of the book you'd like to checkout? ");
+        System.out.print("What is the ISBN of the book you'd like to checkout?: ");
         int isbn = scanner.nextInt();
         scanner.nextLine();
 
         // in the list of books if isbn matches id... set checkout true and add to activeUser's history
         for (Book book : books) {
-            if (isbn == book.getId()) {
+            if (isbn == book.getId() && !book.isCheckedOut()) {
                 book.setCheckedOut(true);
                 activeUser.borrowBook(book);
 
@@ -240,13 +241,23 @@ public class Library {
     }
 
     public void viewAvailableBooks() {
-        List<Book> allBooks = getBooks();
-        for (int i = 0; i < allBooks.size(); i++) {
-            System.out.println("test");
+        for (int i = 0; i < getBooks().size(); i++) {
+            Book currBook = getBooks().get(i);
+            if (!currBook.isCheckedOut()) {
+                System.out.printf("""
+                    ID: %d | Genre: %s
+                    Title: %s | Author: %s
+                    """, currBook.getId(), currBook.getGenre(), currBook.getTitle(), currBook.getAuthor());
+            }
         }
     }
 
     public void run() {
+        System.out.printf("""
+                Welcome to %s!
+                Address: %s
+                Hours: %s%n""", getName(), getAddress(), getHours());
         getMenu();
+        scanner.close();
     }
 }
